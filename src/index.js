@@ -1,22 +1,29 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-import styles from './styles.css'
+/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable jsx-quotes */
+/* eslint-disable semi */
+/* eslint-disable quotes */
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import SimpleSvgPlaceholder from "@cloudfour/simple-svg-placeholder";
 
 export default class ExampleComponent extends Component {
   static propTypes = {
-    text: PropTypes.string
-  }
+    width: PropTypes.string,
+    height: PropTypes.string,
+    bgColor: PropTypes.string,
+    textColor: PropTypes.string
+  };
+
+  static defaultProps = {
+    width: 300,
+    height: 150,
+    bgColor: "#aaa",
+    textColor: "#333"
+  };
+
+  srcString = SimpleSvgPlaceholder({ ...this.props });
 
   render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
+    return <img src={this.srcString} alt="Placeholder" />;
   }
 }
