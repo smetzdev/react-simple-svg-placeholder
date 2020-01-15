@@ -23,7 +23,7 @@ import React from "react";
 
 import PlaceholderImage from "react-simple-svg-placeholder";
 
-const Example = () => <PlaceholderImage width="300" height="150" />;
+const Example = () => <PlaceholderImage width={300} height={150} />;
 ```
 
 ### With an Object
