@@ -45,7 +45,7 @@ const Example = () => {
 };
 ```
 
-## Option Reference
+## Prop Reference
 
 ### width `{Number}`
 
@@ -54,6 +54,10 @@ Defaults to `300`, the default width of SVG elements in most browsers.
 ### height `{Number}`
 
 Defaults to `150`, the default height of SVG elements in most browsers.
+
+### returnAsString `{Boolean}`
+
+Defaults to `false`, toggles if the component only returns the source-string or an actual `<img>`
 
 ### text `{String}`
 
