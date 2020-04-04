@@ -38,7 +38,7 @@ const Example = () => {
     width: 300,
     height: 150,
     bgColor: "#aaa",
-    textColor: "#333"
+    textColor: "#333",
   };
 
   return <PlaceholderImage {...placeholderSettings} />;
@@ -57,7 +57,8 @@ Defaults to `150`, the default height of SVG elements in most browsers.
 
 ### returnAsString `{Boolean}`
 
-Defaults to `false`, toggles if the component only returns the source-string or an actual `<img>`
+Defaults to `false`, toggles if the component only returns the source-string or an actual `<img>`  
+**Please also watch the "getImgSrc Function"-section below**
 
 ### text `{String}`
 
@@ -86,6 +87,19 @@ The color of the text. For transparency, use an `rgba` or `hsla` color value. De
 ### charset `{String}`
 
 Defaults to `UTF-8`, but if your source HTML document's character set is different, you may want to update this to match.
+
+## getImgSrc Function
+
+If you only want to generate an image-src you don't need to use a react-component.  
+You can use the getImgSrc-function of this project.  
+The defaults and props-usage is the same as in the react-component.
+
+```js
+import { getImgSrc } from "react-simple-svg-placeholder";
+
+const imgSrcWithDefaults = getImgSrc();
+const imgSrcWithWidth = getImgSrc({ width: 800 });
+```
 
 ## License
 
