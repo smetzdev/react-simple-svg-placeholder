@@ -8,9 +8,9 @@
     "React",
     "SVG"
   ],
-  "author": "r3sMetz",
+  "author": "smetzdev",
   "license": "MIT",
-  "repository": "r3sMetz/react-simple-svg-placeholder",
+  "repository": "smetzdev/react-simple-svg-placeholder",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
