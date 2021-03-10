@@ -2,18 +2,18 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import SimpleSvgPlaceholder from "@cloudfour/simple-svg-placeholder";
 
-const SSP_defaults = {
+const defaults = {
   width: 300,
   height: 150,
   bgColor: "#aaa",
-  textColor: "#333",
+  textColor: "#333"
 };
 
 export const getImgSrc = (props = {}) =>
-  SimpleSvgPlaceholder({ ...SSP_defaults, ...props });
+  SimpleSvgPlaceholder({ ...defaults, ...props });
 
 export default class ReactSimpleSVGPlaceholder extends Component {
-  srcString = getImgSrc();
+  srcString = getImgSrc({ ...this.props });
 
   render() {
     return this.props.returnAsString ? (
@@ -26,5 +26,5 @@ export default class ReactSimpleSVGPlaceholder extends Component {
 
 // PropTypes
 ReactSimpleSVGPlaceholder.propTypes = {
-  returnAsString: PropTypes.bool,
+  returnAsString: PropTypes.bool
 };
